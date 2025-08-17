@@ -2,6 +2,7 @@
 Realizado por Justin Yak Inicio: 07/08/2025 */
 //Variables
 let amigos = [];
+let list = 0;
 //MAIN
 console.log("Bienvenido :D");
 console.log(amigos);
@@ -15,6 +16,13 @@ function agregarAmigo(){
         amigos.push(amigo);
         console.log(amigos);
         document.querySelector('#amigo').value = '';
+        loadList();
     }
 }
 
+function loadList(){
+    console.log('Lista Actualizada');
+    for (let cant = 0; cant < amigos.length; cant++) {
+         console.log(`${amigos[cant]} \n`);
+    }
+}
