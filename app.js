@@ -21,8 +21,17 @@ function agregarAmigo(){
 }
 
 function loadList(){
+    document.getElementById('listaAmigos').innerHTML = '';
     console.log('Lista Actualizada');
     for (let cant = 0; cant < amigos.length; cant++) {
          console.log(`${amigos[cant]} \n`);
+         createList('listaAmigos',amigos[cant])
     }
+}
+
+function createList(id,text){
+    let Element = document.createElement('li');
+    let lista = document.getElementById(id);
+    Element.textContent = text;
+    lista.appendChild(Element).style.textAlign = 'center';
 }
